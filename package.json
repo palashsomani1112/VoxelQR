@@ -1,0 +1,14 @@
+{
+  "name": "voxel-qr",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "description": "QR codes that stand up as pastel isometric voxel dioramas and flip flat to be scanned.",
+  "scripts": {
+    "test": "node tests/qr.test.mjs && node tests/sculpt.test.mjs && node tests/compose.test.mjs && node tests/app.test.mjs && node tests/a11y.test.mjs",
+    "bundle": "node tools/bundle.mjs",
+    "preview": "node tools/preview.mjs templates && python3 tools/sheet.py preview.json templates.png 3 1.6",
+    "serve": "python3 -m http.server 8000"
+  }
+}
